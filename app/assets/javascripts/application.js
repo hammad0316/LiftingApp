@@ -15,4 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require bootstrap_sprockets
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
