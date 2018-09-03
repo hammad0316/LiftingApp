@@ -8,6 +8,13 @@
 
 # Lift.create date: Date.today, liftname: 'Bench Press', ismetric: false, weightlifted: '220', repsperformed: '1', onerm: '1'
 
+MuscleGroup.destroy_all
+
 MuscleGroup.create name: 'Biceps', area: 'upper'
-MuscleGroup.create name: 'Triceps', area: 'upper'
+tricep = MuscleGroup.create name: 'Triceps', area: 'upper'
+chest = MuscleGroup.create name: 'Chest', area: 'upper'
 MuscleGroup.create name: 'Quadriceps', area: 'lower'
+
+Lift.destroy_all
+
+Lift.create name: 'Bench Press', muscle_groups: [chest.id]
