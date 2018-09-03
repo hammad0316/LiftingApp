@@ -1,5 +1,5 @@
 class LiftsController < ApplicationController
     def index
-        @lifts = Lift.all
+        @lifts = MuscleGroup.all
     end
 end

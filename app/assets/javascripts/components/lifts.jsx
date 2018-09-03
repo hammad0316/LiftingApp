@@ -14,8 +14,8 @@ class lifts extends React.Component {
     return this.state.lifts.map(lift => {
       return (
         <div key={lift.id}>
-          <h6>{lift.liftname}</h6>
-          <p>{lift.weightlifted}</p>
+          <h1>{lift.name}</h1>
+          <h4>{lift.area}</h4>
         </div>
       );
     });

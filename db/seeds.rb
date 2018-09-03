@@ -8,3 +8,6 @@
 
 # Lift.create date: Date.today, liftname: 'Bench Press', ismetric: false, weightlifted: '220', repsperformed: '1', onerm: '1'
 
+MuscleGroup.create name: 'Biceps', area: 'upper'
+MuscleGroup.create name: 'Triceps', area: 'upper'
+MuscleGroup.create name: 'Quadriceps', area: 'lower'
