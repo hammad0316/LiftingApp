@@ -53,6 +53,7 @@ end
 # ADDED GEMS
 gem 'bootstrap', '~>4.0.0alpha3.1'
 gem 'react-rails'
+gem 'webpacker'
 
 
 group :test do
