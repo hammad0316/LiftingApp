@@ -1,5 +1,10 @@
 {
   "name": "LiftingApp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7",
+    "ts-loader": "3.5.0",
+    "typescript": "^3.0.3"
+  }
 }
