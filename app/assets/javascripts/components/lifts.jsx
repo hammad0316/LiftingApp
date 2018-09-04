@@ -18,8 +18,8 @@ class lifts extends React.Component {
     return this.state.muscleGroups.map(muscleGroup => {
       return (
         <div key={muscleGroup.id}>
-          <h2>{muscleGroup.name}</h2>
-          <h4>{muscleGroup.area}</h4>
+          <h3>{muscleGroup.name}</h3>
+          <h5>{muscleGroup.area}</h5>
         </div>
       );
     });
@@ -29,9 +29,9 @@ class lifts extends React.Component {
     return this.state.lifts.map(lift => {
       return (
         <div key={lift.id}>
-          <h2>{lift.name}</h2>
+          <h3>{lift.name}</h3>
           {lift.muscle_groups.map(mg => (
-            <li>{mg}</li>
+            <li key={mg}>{mg}</li>
           ))}
         </div>
       );

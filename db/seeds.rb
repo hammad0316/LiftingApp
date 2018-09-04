@@ -10,11 +10,12 @@
 
 MuscleGroup.destroy_all
 
-MuscleGroup.create name: 'Biceps', area: 'upper'
-tricep = MuscleGroup.create name: 'Triceps', area: 'upper'
+biceps = MuscleGroup.create name: 'Biceps', area: 'upper'
+triceps = MuscleGroup.create name: 'Triceps', area: 'upper'
 chest = MuscleGroup.create name: 'Chest', area: 'upper'
 MuscleGroup.create name: 'Quadriceps', area: 'lower'
 
 Lift.destroy_all
 
-Lift.create name: 'Bench Press', muscle_groups: [chest.id]
+Lift.create name: 'Bench Press', muscle_groups: [chest.id, triceps.id]
+Lift.create name: 'Hammer Curl', muscle_groups: [biceps.id]
