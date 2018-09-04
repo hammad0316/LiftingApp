@@ -1,3 +1,19 @@
 // Place all the styles related to the Lifts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.underline {
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 12px;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}

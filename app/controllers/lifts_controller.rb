@@ -9,5 +9,15 @@ class LiftsController < ApplicationController
         end
 
         @muscleGroups = MuscleGroup.all
+
+        @users = User.all
+
+        @users.map do |user|
+            user.onerepmax.map! do |max|
+                max["lift"] = Lift.find(max["lift"]).name
+                max
+            end
+        end
+        
     end
 end

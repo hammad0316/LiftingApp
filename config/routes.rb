@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'lifts/show'
   resources :lifts
   resources :muscle_group
+  resources :users
 
   root :to => 'lifts#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

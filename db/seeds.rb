@@ -17,5 +17,12 @@ MuscleGroup.create name: 'Quadriceps', area: 'lower'
 
 Lift.destroy_all
 
-Lift.create name: 'Bench Press', muscle_groups: [chest.id, triceps.id]
-Lift.create name: 'Hammer Curl', muscle_groups: [biceps.id]
+benchpress = Lift.create name: 'Bench Press', muscle_groups: [chest.id, triceps.id]
+hammercurl = Lift.create name: 'Hammer Curl', muscle_groups: [biceps.id]
+
+User.destroy_all
+
+User.create username: 'johnjacob', password: 'password', email: 'johnjacob@email.com', lifts: [],
+  onerepmax: [{"lift": benchpress.id, "max": "1000"}, {"lift": hammercurl.id, "max": "300"}]
+User.create username: 'benfranklin', password: 'password', email: 'benfranklin@email.com', lifts: [],
+  onerepmax: [{"lift": benchpress.id, "max": "100"}, {"lift": hammercurl.id, "max": "60"}]
