@@ -51,6 +51,9 @@ class lifts extends React.Component {
             </td>
             <td>0</td>
             <td>0</td>
+            <td>
+              <button>Edit</button> <button>Delete</button>{" "}
+            </td>
           </tr>
         </tbody>
       );
@@ -60,11 +63,12 @@ class lifts extends React.Component {
   render() {
     return (
       <table className="table">
-        <thead>
+        <thead className="thead-dark">
           <th>Lift Name</th>
           <th>Muscle Groups</th>
           <th>Weight Put Up</th>
           <th>Reps</th>
+          <th />
         </thead>
         {this.renderRows()}
       </table>
