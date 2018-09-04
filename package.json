@@ -4,6 +4,7 @@
   "dependencies": {
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
+    "react-table": "^6.8.6",
     "ts-loader": "3.5.0",
     "typescript": "^3.0.3"
   }
