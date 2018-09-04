@@ -38,16 +38,36 @@ class lifts extends React.Component {
     });
   }
 
+  renderRows() {
+    return this.state.lifts.map(lift => {
+      return (
+        <tbody key={lift.id}>
+          <tr>
+            <td>{lift.name}</td>
+            <td>
+              {lift.muscle_groups.map(mg => (
+                <li key={mg}>{mg}</li>
+              ))}
+            </td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      );
+    });
+  }
+
   render() {
     return (
-      <div>
-        <br />
-        <h1>Muscle Groups</h1>
-        {this.renderMuscleGroups()}
-        <br />
-        <h1>Lifts</h1>
-        {this.renderLifts()}
-      </div>
+      <table className="table">
+        <thead>
+          <th>Lift Name</th>
+          <th>Muscle Groups</th>
+          <th>Weight Put Up</th>
+          <th>Reps</th>
+        </thead>
+        {this.renderRows()}
+      </table>
     );
   }
 }
